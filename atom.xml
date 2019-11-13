@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://courserye.github.io</id>
     <title>Gridea</title>
-    <updated>2019-11-13T13:53:05.012Z</updated>
+    <updated>2019-11-13T14:11:10.658Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://courserye.github.io"/>
     <link rel="self" href="https://courserye.github.io/atom.xml"/>
@@ -11,12 +11,12 @@
     <icon>https://courserye.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://courserye.github.io/post/about</id>
-        <link href="https://courserye.github.io/post/about">
+        <title type="html"><![CDATA[嗯我去二群翁]]></title>
+        <id>https://courserye.github.io/post/ng-wo-qu-er-qun-weng</id>
+        <link href="https://courserye.github.io/post/ng-wo-qu-er-qun-weng">
         </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>这是关于的页面，可以在这里向世界介绍你！</p>
+        <updated>2019-11-13T14:10:58.000Z</updated>
+        <content type="html"><![CDATA[<p>气味气味</p>
 ]]></content>
     </entry>
     <entry>
