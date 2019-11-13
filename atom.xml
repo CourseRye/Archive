@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://courserye.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-11-13T14:11:10.658Z</updated>
+    <title>青旗沽酒趁梨花</title>
+    <updated>2019-11-13T14:13:36.683Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://courserye.github.io"/>
     <link rel="self" href="https://courserye.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://courserye.github.io/images/avatar.png</logo>
     <icon>https://courserye.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, 青旗沽酒趁梨花</rights>
     <entry>
         <title type="html"><![CDATA[嗯我去二群翁]]></title>
         <id>https://courserye.github.io/post/ng-wo-qu-er-qun-weng</id>
