@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://courserye.github.io/</id>
     <title>青旗沽酒趁梨花</title>
-    <updated>2020-03-25T08:28:51.462Z</updated>
+    <updated>2020-03-25T09:07:17.066Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://courserye.github.io/"/>
     <link rel="self" href="https://courserye.github.io/atom.xml"/>
@@ -16,159 +16,6 @@
         <link href="https://courserye.github.io/oakpi">
         </link>
         <updated>2020-03-25T14:10:58.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="为什么需要改版">为什么需要改版？</h2>
-<p>改版的原因主要有三点：</p>
-<ul>
-<li>需求得不到满足</li>
-<li>产品使用体验差</li>
-<li>糟糕的视觉交互</li>
-</ul>
-<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/swQDJjd.jpg" alt="OA - 考核功能改版总结.003" loading="lazy"></figure>
-<p><img src="https://i.imgur.com/WlGHAPV.jpg" alt="OA - 考核功能改版总结.004" loading="lazy">考核标准 = 若干个 KPI 组成的绩效考核</p>
-<p>三个问题产生的原因是什么？</p>
-<ul>
-<li>需求得不到满足→季度考核停止了迭代，无人维护</li>
-<li>产品使用体验差→没有产品经理的参与，机械式的根据文档实现需求</li>
-<li>糟糕的视觉交互→没有设计师的参与，实现需求就好，没有考虑设计交互</li>
-</ul>
-<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/pYdOYrX.jpg" alt="OA - 考核功能改版总结.005" loading="lazy"></figure>
-<p>问题产生的根本原因是什么？这就要从工作流程开始说起了，一个正常的需求到上线的流程是这样的：</p>
-<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/C09jmGk.jpg" alt="OA - 考核功能改版总结.006" loading="lazy"></figure>
-<p>但是因为 OA 在内部的不重视，觉得够用就行，所以没有专门的产品经理和设计师跟进需求，需求方提出需求后直接跳到了研发环节，形成了当前的流程：</p>
-<figure data-type="image" tabindex="4"><img src="https://i.imgur.com/aZIHl1L.jpg" alt="OA - 考核功能改版总结.007" loading="lazy"></figure>
-<p>因为职业分工的缘故，研发接到需求后，会更多的站在程序员视角思考问题，如何更优雅的用代码实现需求👨‍💻‍，会较少的站在产品视角或设计视角思考问题🤔，日积月累，造就了使用体验不佳的季度考核功能。</p>
-<figure data-type="image" tabindex="5"><img src="https://i.imgur.com/2QJwG98.png" alt="考核功能" loading="lazy"></figure>
-<p>原有的季度考核页面</p>
-<h2 id="解决方案">解决方案</h2>
-<p>解决方案有两点：</p>
-<ul>
-<li>
-<p>回归至正确的工作流程</p>
-</li>
-<li>
-<p>通过用户旅程地图梳理使用场景和需求，重新设计季度考核</p>
-</li>
-</ul>
-<p>对于使用者而言，他的核心需求是易用：</p>
-<ul>
-<li>季度考核进度提醒</li>
-<li>自评填写操作简单</li>
-</ul>
-<figure data-type="image" tabindex="6"><img src="https://i.imgur.com/O76kLfi.jpg" alt="OA - 考核功能改版总结.009" loading="lazy"></figure>
-<p>对于管理者而言，他的需求是提效：</p>
-<ul>
-<li>创建考核标准效率高</li>
-<li>分配考核标准效率高</li>
-<li>填写员工评价效率高</li>
-</ul>
-<figure data-type="image" tabindex="7"><img src="https://i.imgur.com/OAWg0TD.jpg" alt="OA - 考核功能改版总结.010" loading="lazy"></figure>
-<p>归纳总结的话，改版目标是「提效」和「易用」，改版重点在于「考核标准」功能。</p>
-<h2 id="页面重设计">页面重设计</h2>
-<p>问题来了，如何实现改版的目标？</p>
-<ul>
-<li>目标一：如何提高创建、分配考核标准的效率？</li>
-<li>目标二：如何改善填写考核标准的易用性？</li>
-</ul>
-<h3 id="目标一">目标一</h3>
-<p>如何提高创建、分配考核标准的效率？目前创建考核标准有两种流程，流程一，创建一份空白的考核标准，需要手动填写工作目标、KPI。</p>
-<figure data-type="image" tabindex="8"><img src="https://i.imgur.com/CZG6Fme.jpg" alt="OA - 考核功能改版总结.011" loading="lazy"></figure>
-<p>流程二，选择创建好的标准，再选择性地修改某些 KPI 的内容并保存。</p>
-<figure data-type="image" tabindex="9"><img src="https://i.imgur.com/3wS2vCn.jpg" alt="OA - 考核功能改版总结.012" loading="lazy"></figure>
-<p>很明显，问题出在流程一。一份考核标准有 5-9 个 KPI，一个 KPI 的选项有 5-15 个，假设复制粘贴一个选项需要 10s，那么创建一份考核标准的时间约为 5-22 分钟，如果算上工种数量的话，时间还要翻 1-4 倍（保守估计每个部门都有 1-4 个工种，如策划、前端、后端、设计，每个工种的考核标准一致），也就是 5-88 分钟，如果是 5 分钟还没什么，88 分钟就可能要「骂娘」了，什么破 OA，垃圾产品经理😑。</p>
-<p>那么创建考核标准有没有更优解，如何才能高效的创建？在思考这个问题前，应该思考另外一个问题，考核标准的本质是什么？</p>
-<p>考核标准的最小单位是  KPI，若干个 KPI 组成了考核指标，若干个考核指标组成了考核标准。是不是和试卷有点类似？</p>
-<p>试卷的最小单位是题目，若干个题目组成了大题（选择题、填空题、简答题等），若干个大题组成了试卷。</p>
-<figure data-type="image" tabindex="10"><img src="https://i.imgur.com/TdqPMvl.jpg" alt="OA - 考核功能改版总结.012" loading="lazy"></figure>
-<p>是不是可以用拼乐高的方法，把考核标准「拼」出来？如此一来，便大大提升了创建标准的效率，只需要选择几个 KPI，再组装起来，便形成了考核标准。</p>
-<p>所以使用者的旅程地图应该增加一步「创建 KPI」。</p>
-<figure data-type="image" tabindex="11"><img src="https://i.imgur.com/ovHcWqY.jpg" alt="OA - 考核功能改版总结.014" loading="lazy"></figure>
-<p>原有的信息架构和现在的没有太大区别，多了一个「 KPI」，少了一个「新增考核标准」，因为从逻辑上，新增考核标准是考核标准的子集，所以将「新增考核标准」改成了按钮，放在了「考核标准」界面。</p>
-<figure data-type="image" tabindex="12"><img src="https://i.imgur.com/XKUinwC.jpg" alt="OA - 考核功能改版总结.015" loading="lazy"></figure>
-<p>KPI 就是关键绩效指标（Key Performance Indicator）</p>
-<p>创建 KPI 只是一方面，另一方面页面的使用和交互体验也非常重要，原有的创建标准界面有以下不足：</p>
-<ul>
-<li>理解成本高：对考核标准没有全局的认知，不了解考核标准有几个 KPI，以及每个 KPI 的具体内容</li>
-<li>阅读体验差：页面一打开就是编辑状态，全都是输入框。即使是全屏状态下，一个屏幕也只能显示两个 KPI，如果 KPI 的选项过多，甚至只能显示一个半 KPI</li>
-<li>编辑体验差：
-<ul>
-<li>想要快速定位到某个指标十分困难，只能依靠鼠标滚轮</li>
-<li>KPI 的次序无法更改，一旦创建错了，就是灾难性的后果。如果想把 No.3 KPI 移动到 No.1 ，那么需要先删除 No.1 KPI 和 No.2 KPI（此时 No.3 KPI 会变为 No.1），然后再添加原有的 No.1 KPI 和 No.2 KPI。（这是什么沙雕操作！！）</li>
-<li>输入光标聚焦输入框时，整个页面的所有输入框高度都会更改，交互动画非常突兀，导致用户十分懵逼</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="13"><img src="https://i.imgur.com/UBKsEgf.png" alt="位图" loading="lazy"></figure>
-<p>原有的创建标准页面</p>
-<p>优化方案：</p>
-<ul>
-<li>理解成本高：左侧增加目录，能快速知道考核标准的大纲结构</li>
-<li>阅读体验差：页面区分阅读和编辑状态，默认显示阅读状态。鼠标 hover KPI 时显示编辑按钮，点击可进入编辑状态。</li>
-<li>编辑体验差：
-<ul>
-<li>左侧目录标题，定位指标</li>
-<li>右侧目录 KPI，复制指标</li>
-<li>鼠标 hover KPI 时，可移动拖拽 KPI，更改次序</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="14"><img src="https://i.imgur.com/4Xg1YCu.png" alt="5.5创建标准" loading="lazy"></figure>
-<p>现在的创建标准页面</p>
-<h3 id="目标二">目标二</h3>
-<p>如何改善填写考核标准的易用性？原有的填写考核页面有以下不足：</p>
-<ul>
-<li>页面结构和信息层次不清晰：
-<ul>
-<li>没有设计规范，基本的对齐、间距划分都没有做到</li>
-<li>没有重点，无法快速地定位重要信息和目标选项</li>
-<li>表单的填写内容众多，没有把内容按照相关性分组</li>
-</ul>
-</li>
-<li>认知负担：
-<ul>
-<li>页面有部分元素本应无需显示，增加了理解成本</li>
-<li>流程进度和工作自评不应该用表格的形式显示</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="15"><img src="https://i.imgur.com/J3ntSJB.png" alt="编组 21" loading="lazy"></figure>
-<p>优化方案：</p>
-<ul>
-<li>页面结构和信息层次不清晰
-<ul>
-<li>遵循「亲密性」「对齐」设计原则，对页面进行合理布局</li>
-<li>遵循「接近」设计原则，通过卡片的分组形式按照信息的相关性进行分组展示，降低页面的信息复杂度</li>
-</ul>
-</li>
-<li>认知负担：
-<ul>
-<li>精简页面元素，只保留需要显示的内容</li>
-<li>优化流程进度和工作自评的设计样式</li>
-</ul>
-</li>
-</ul>
-<figure data-type="image" tabindex="16"><img src="https://i.imgur.com/NWddozW.png" alt="3.1考核详情 - 个人自评" loading="lazy"></figure>
-<p>其余页面因仍能满足现有的需求，所以没有重新设计（并不是为了改版而改版），只是优化了使用的交互细节。</p>
-<h2 id="优化交互细节">优化交互细节</h2>
-<h3 id="简化交互">简化交互</h3>
-<p>根据费茨法则（Fitts's Law）所描述的，如果用户鼠标移动距离越少、对象相对目标越大，那么用户越容易操作。通过运用上下文工具（即：放在内容中的操作工具），使内容和操作融合，从而简化交互。</p>
-<p>删除了所有表格内的「查询」「重置」按钮，改为实时查询，因为季度考核的数据量并不大，选择筛选项再点击「查询」按钮查询筛选结果的交互操作有些多此一举。</p>
-<p>原有我的考核页面中，若没有分配考核标准，则需要手动跳转至分配标准页面，找到该成员，再分配标准。现在若没有分配标准，则是在我的考核页面中通过弹窗直接分配标准。</p>
-<p>原有分配标准的逻辑是每个月都需要对成员手动分配一次标准，但实际使用中操作过于繁琐，因为某些成员每个季度的考核标准是一成不变的。现在分配标准的逻辑则是只要分配一次标准，后续季度不需要再分配标准。（若要改动，则需重新分配）</p>
-<h3 id="足不出户">足不出户</h3>
-<p>能在这个页面解决的问题，就不要去其它页面解决，因为任何页面刷新和跳转都会引起变化盲视（Change Blindness），导致用户心流（Flow）被打断。频繁的页面刷新和跳转，就像在看戏时，演员说完一行台词就安排一次谢幕一样。</p>
-<blockquote>
-<p><strong>变化盲视（Change Blindness）</strong> ：指视觉场景中的某些变化并未被观察者注意到的心理现象。产生这种现象的原因包括场景中的障碍物，眼球运动、地点的变化，或者是缺乏注意力等。</p>
-<p><strong>心流（Flow）</strong> ：也有别名以化境 (Zone) 表示，亦有人翻译为神驰状态，定义是一种将个人精神力完全投注在某种活动上的感觉；心流产生时同时会有高度的兴奋及充实感。</p>
-</blockquote>
-<p>原有考核标准管理页面中，预览某个考核标准会新建 Tab 页打开，现在改成了弹窗预览考核标准。而 KPI 页面则进一步简化操作，鼠标 hover 时，显示 KPI 的内容预览。</p>
-<figure data-type="image" tabindex="17"><img src="https://i.imgur.com/Pr4vWqr.png" alt="6.1 查看标准弹窗" loading="lazy"></figure>
-<p>弹窗预览考核标准</p>
-<figure data-type="image" tabindex="18"><img src="https://i.imgur.com/hg2EnOJ.png" alt="4.1关键绩效指标" loading="lazy"></figure>
-<p>hover 预览 KPI 内容</p>
-<h2 id="总结">总结</h2>
-<p>以上就是本次的项目总结内容了，但 Rome was not built in a day，季度考核也不是一步到位的产品，在后续的使用过程中，还需要持续的迭代，优化各种细节和需求，一步步地把季度考核功能打磨到极致，做到最好。</p>
-<p>延伸思考：本文的季度考核功能是针对我司单独定制的，通用型的考核功能应该如何设计？（待完成）</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[请问请问无群二]]></title>
@@ -179,15 +26,6 @@
         <summary type="html"><![CDATA[<p>请问请问</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>请问请问</p>
-<!-- more -->
-<p>气味气味</p>
-<!-- more -->
-<!-- more -->
-<p>气味我去</p>
-<!-- more -->
-<p>其味无穷</p>
-<p>asd sa</p>
-<p>asd</p>
 ]]></content>
     </entry>
 </feed>
